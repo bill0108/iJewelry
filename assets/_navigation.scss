@@ -1,0 +1,36 @@
+.navigation{
+    background: #101820FF;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 5px 20px rgba($color: #000000, $alpha: 0.05);
+    z-index: 10;
+    nav{
+        width: 80%;
+        margin: auto;
+        min-height: 10vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        ul{
+           display: flex; 
+           justify-content: space-between;
+           align-items: center;
+           flex: 1;
+        }
+        #logo{
+            flex: 3;
+        } 
+    }
+}
+@media screen and(max-width: 1200px) {
+    nav{
+        #logo{
+            flex: 1;
+        }
+        ul{
+            li{
+                margin-left: 2.5rem;
+            }
+        }
+    }
+}

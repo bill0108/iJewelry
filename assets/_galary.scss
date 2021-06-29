@@ -1,0 +1,99 @@
+.galary{
+    padding: 5rem;
+    .container{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .card{
+            position: relative;
+            width: 260px;
+            height: 260px;
+            margin: 4px;
+            border: 4px #fcea3c solid;
+            .img-case{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                }
+            }
+            .content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                display: flex;
+                align-items: flex-end;
+                padding: 20px;
+                h2{
+                    color: white;
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                    transform: translateY(2rem);
+                    transition: 0.3s;
+                    opacity: 0;
+                }
+                p{
+                    color: white;
+                    transform: translateY(2rem);
+                    transition: 0.3s;
+                    opacity: 0;
+                }
+                .more {
+                    align-self: center;
+                    h2{
+                       font-size: 2rem; 
+                    }
+                }
+            }
+        }
+    }
+}
+.galary .container .card:hover {
+    transform: scale(1.15);
+    transition: 0.5s;
+    box-shadow: 0 25px 40px rgba($color: #000000, $alpha: 0.5);
+    z-index: 1;
+}
+.galary .container .card:hover .content h2 {
+    transform: translateY(0rem);
+    transition-delay: 0.4s;
+    opacity: 1;
+}
+.galary .container .card:hover .content p {
+    transform: translateY(0rem);
+    transition-delay: 0.5s;
+    opacity: 1;
+}
+.galary .container .card .img-case::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #fcea3c, black);
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+}
+.galary .container .card:hover .img-case::before{
+    opacity: 0.6;
+} 
+@media screen and (max-width: 1200px) {
+    .galary{
+        padding: 1rem;
+    }
+    
+}

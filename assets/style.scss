@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+#logo a{
+    color: #008000;
+}
+#logo span{
+    text-transform: uppercase;
+    color:  #f39c12 ;
+}
+li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #FCEA3C;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.btn{
+    position: relative;
+    color: #FCEA3C;
+    border: 2px #FCEA3C solid;
+    padding: 10px 20px;
+    font-weight: 700;
+}
+
+.btn:hover {
+    background: #FCEA3C;
+    color: #101820FF;
+}
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #101820FF;
+    text-transform: uppercase;
+}
+@import"navigation";
+@import"banner";
+@import"upcoming";
+@import"galary";
+@import"staffs";
+@import"customers";
+@import"footer";
+@media screen and (max-width: 1200px) {
+    html{
+        font-size: 90%; 
+        }
+}
+
+@media screen and( max-width: 800px) {
+    html{
+        font-size: 80%;
+        }  
+}

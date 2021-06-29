@@ -1,0 +1,95 @@
+.parallax {
+    background: url(../img/background.jpg) fixed;
+    background-size: cover;
+
+    .upcoming{
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .container{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background: rgba(255, 255, 255, 0.05);
+            width: 900px;
+            height: 350px;
+            border-radius: 15px;
+            backdrop-filter:  blur(10px);
+            transition: 0.5s;
+            img{
+                position: absolute;
+                height: 500px;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: 0.5s;
+            }
+            .content{
+                position: relative;
+                width: 50%;
+                left: 20%;
+                padding: 2rem 2rem 2rem 4rem;
+                opacity: 0;
+                transition: 0.5s;
+                h2{
+                    color: #fcea3c;
+                    text-transform: uppercase;
+                    font-size: 2.2rem;
+                    padding-bottom: 10px;
+                }
+                p{
+                    color: #fcea3c;
+                }
+                .btn{
+                    display: inline-block;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+}
+.upcoming .container:hover img {
+    left: 75%;
+    height: 600px;
+}
+.upcoming .container:hover .content {
+    opacity: 1;
+    left: 0;
+}
+@media screen and (max-width: 975px){
+    .parallax .upcoming .container {
+        max-width: 600px;
+        width: auto;
+    }
+    .parallax .upcoming .container:hover img {
+        left: 80%;
+        height: 400px;
+    }
+}
+@media screen and (max-width: 750px) {
+    .parallax .upcoming .container:hover{
+        height: 500px;
+        margin-bottom: -15px;
+    }
+    .parallax .upcoming .container:hover img{
+        left: 60%;
+        bottom: 0;
+    }
+    .parallax .upcoming .container .content {
+        width: 100%;
+        left: 0;
+        align-self: flex-start;
+        padding: 40px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .parallax .upcoming .container img {
+        height: 300px;
+    }
+    .parallax .upcoming .container:hover img{
+        height: 300px;
+    }
+}
